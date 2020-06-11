@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Главное меню</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='style.css')}}">
+</head>
+<body>
+	<h2 align="center">Главное меню</h2>
+	<div class="inquiries">
+		<a href="/menu?inquiry=1"> 1. Создать отчет о начислении бонусных миль по форме: Номер рейса, дата вылета, общее количество начисленных бонусных миль.</a> <br><br>
+		<a href="/menu?inquiry=2"> 2. Создать отчет о продаже билетов на каждый рейс за 2017 года по форме: Название аэропорта, месяц вылета, класс билета, общее число проданных билетов. </a> <br><br>
+		<a href="/menu?inquiry=3"> 3. Покажите все сведения о пассажирах, покупавших самые дорогие билеты на рейс ХХХ. </a> <br><br>
+		<a href="/menu?inquiry=4"> 4. Покажите все сведения о пассажирах, которые зарегистрированы в БД , но ни разу не покупавших билеты(с помощью левостороннего соединения). </a> <br><br>
+		<a href="/menu?inquiry=5"> 5. Покажите все сведения о пассажирах, не покупавшие билеты в марте 2014 года. </a> <br><br>
+		<a href="/menu?inquiry=6"> 6. Покажите все сведения о пассажирах, чаще всех покупавших билеты в марте-апреле 2013 года. </a> <br><br>
+	</div>
+	<div class="procedure">
+		<p>Создать отчет по форме: Номер рейса, общая стоимость билетов и общее количество начисленных бонусов пассажирам этого рейса.</p>
+		<form method="POST" action="">
+			<p align="center">
+				<label for="month">Месяц: </label>
+				<input type="number" autocomplete="off" id="month" name="month" min="1" max="12">
+				<label for="year">Год: </label>
+				<input type="number" autocomplete="off" id="year" name="year" min="1970" max="2020">
+				<input value="search" name="search" type="submit">
+			</p>
+		</form>
+	</div>
+	<p align="center"><a href="/menu?inquiry=exit" class="button">Выйти из системы</a></p>
+</body>
+</html>

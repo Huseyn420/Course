@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>Report</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='style.css')}}">
+</head>
+<body>
+    <h2 align="center">The result of working with the database</h2>
+    <table border="1" width="80%" align="center">
+        <tr>
+            <th>Flight</th>
+            <th>Total cost</th>
+            <th>Bonus amount</th>
+        </tr>
+        {%for string in strings%}
+        <tr>
+            <td>{{string['Flight']}}</td>
+            <td>{{string['Total_cost']}}</td>
+            <td>{{string['Bonus_amount']}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    <p align="center"><a href="http://127.0.0.1:5000/menu/" class="button">Back</a></p>
+</body>
+</html>

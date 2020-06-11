@@ -1,0 +1,55 @@
+body {
+  background-color: #C7B39B;
+  color: #000000;
+}
+
+td {
+  text-align: center;
+  background: #FFCC00;
+}
+
+th {
+  text-align: center;
+  background: #FF8000;
+}
+
+table {
+  border: 1;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.button {
+ 	border: 1px solid #333333;
+  display: inline-block;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: #000000;
+  margin-top: 20px; 
+}
+  
+.button:hover {
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  background: linear-gradient(to bottom, #FCFFF4, #E9E9CE);
+  color: #AA0000;
+}
+
+.inquiries { 
+  text-align: justify;
+  background: #FFCC00; 
+  border: 1px solid black;
+  padding: 2%;
+  margin-left: 25%;
+  margin-right: 25%;
+  position: relative; 
+} 
+
+.procedure { 
+  text-align: justify;
+  background: #FF8000; 
+  border: 1px solid black;
+  padding: 0% 2% 1%;
+  margin-left: 25%;
+  margin-right: 25%;
+  position: relative; 
+} 

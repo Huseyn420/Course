@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>First request</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='style.css')}}">
+</head>
+<body>
+    <h2 align="center">Bonus miles accrual form report</h2>
+    <table>
+        <tr>
+            <th>Flight</th>
+            <th>Date and time</th>
+            <th>Number of bonuses</th>
+        </tr>
+        {%for string in strings%}
+        <tr>
+            <td>{{string['Flight']}}</td>
+            <td>{{string['Date_and_time']}}</td>
+            <td>{{string['Number_of_bonuses']}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    <p align="center"><a href="http://127.0.0.1:5000/menu/" class="button">Back</a></p>
+</body>
+</html>

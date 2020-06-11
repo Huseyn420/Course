@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Second request</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='style.css')}}">
+</head>
+<body>
+    <h2 align="center">Report on the sale of tickets for each flight for 2017</h2>
+    <table>
+        <tr>
+            <th>Departure airport</th>
+            <th>Arrival airport</th>
+            <th>Departure month</th>
+            <th>Class</th>
+            <th>Number of tickets sold</th>
+        </tr>
+        {%for string in strings%}
+        <tr>
+            <td>{{string['Airport_1']}}</td>
+            <td>{{string['Airport_2']}}</td>
+            <td>{{string['Month']}}</td>
+            <td>{{string['Class']}}</td>
+            <td>{{string['Quantity']}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    <p align="center"><a href="http://127.0.0.1:5000/menu/" class="button">Back</a></p>
+</body>
+</html>
